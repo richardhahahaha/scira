@@ -1,72 +1,130 @@
 # Scira
 
+A minimalistic AI-powered search engine that helps you find information on the internet.
+
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+</a>
+
+<br />
+
+
 ![Scira](/app/opengraph-image.png)
 
-A minimalistic AI-powered search engine that helps you find information on the internet.
-Originally forked from [https://github.com/zaidmukaddam/scira](https://github.com/zaidmukaddam/scira)
+<br />
 
-## Table of Modifications
+🔗 **[Try Scira at scira.ai](https://scira.ai)**
 
-1. 集成了 OpenAICompatible 支持，提升了系统的兼容性和扩展性
-2. 新增 Pure LLM 模式，支持 Deepseek R1 和 V3 模型的集成（仅在Pure LLM模式下）
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/zaidmukaddam/scira)
 
-## Demo
-Check out the live demo => **[https://s.deeptoai.com](https://s.deeptoai.com/)**
 
 ## Powered By
 
 <div align="center">
-  <div style="display: flex; justify-content: center; align-items: center; gap: 80px; margin: 20px 0;">
-    <a href="https://sdk.vercel.ai/docs">
-      <img src="/public/one.svg" alt="Vercel AI SDK" height="40" />
-    </a>
-    <a href="https://tavily.com">
-      <img src="/public/four.svg" alt="Tavily AI" height="40" />
-    </a>
-  </div>
+
+|          [Vercel AI SDK](https://sdk.vercel.ai/docs)          |                [Exa AI](https://exa.ai)                |
+| :-----------------------------------------------------------: | :----------------------------------------------------: |
+| <img src="/public/one.svg" alt="Vercel AI SDK" height="40" /> | <img src="/public/exa.png" alt="Exa AI" height="40" /> |
+|            For AI model integration and streaming             |          For web search and content retrieval          |
+
 </div>
 
-- [Vercel AI SDK](https://sdk.vercel.ai/docs) - For AI model integration and streaming
-- [Tavily AI](https://tavily.com) - For search grounding and web search capabilities
+## Special Thanks
+
+<div align="center" markdown="1">
+
+[![Warp](https://github.com/user-attachments/assets/2bda420d-4211-4900-a37e-e3c7056d799c)](https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=scira)<br>
+
+### **[Warp, the intelligent terminal](https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=scira)**<br>
+
+[Available for MacOS, Linux, & Windows](https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=scira)<br>
+[Visit warp.dev to learn more](https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=scira)
+
+</div>
 
 ## Features
 
-- **AI-powered search**: Get answers to your questions using Anthropic's Models.
-- **Web search**: Search the web using Tavily's API.
-- **URL Specific search**: Get information from a specific URL.
-- **Weather**: Get the current weather for any location using OpenWeather's API.
-- **Programming**: Run code snippets in multiple languages using E2B's API.
-- **Maps**: Get the location of any place using Google Maps API, Mapbox API, and TripAdvisor API.
-- **YouTube Search**: Search for videos on YouTube and get timestamps and transcripts [powered by Exa.AI - the Web Search API](https://exa.ai/).
-- **Academic Search**: Search for academic papers [powered by Exa.AI - the Web Search API](https://exa.ai/). 
-- **X Posts Search**: Search for posts on X.com [powered by Exa.AI - the Web Search API](https://exa.ai/).
-- **Flight Tracker**: Track flights using AviationStack's API.
-- **Trending Movies and TV Shows**: Get information about trending movies and TV shows.
-- **Movie or TV Show Search**: Get information about any movie or TV show.
+### Core Search & Information
 
-## LLM used
-- [xAI's Grok](https://x.ai/grok)
-- [Anthropic's Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet)
-- [Meta's Llama 3.3 70B by Cerebras](https://inference-docs.cerebras.ai/introduction)
-- [Deepseek R1 Distill by Groq Inc](https://console.groq.com/docs/model/deepseek-r1-distill-llama-70b)
+- **AI-powered search**: Get answers to your questions using multiple AI models including xAI's Grok, Anthropic's Claude, Google's Gemini, and OpenAI's GPT models
+- **Web search**: Search the web using Exa's API with support for multiple queries, search depths, and topics
+- **URL content retrieval**: Extract and analyze content from any URL using Exa AI with live crawling capabilities
+- **Reddit search**: Search Reddit content with time range filtering using Tavily API
+- **X (Twitter) search**: Search X posts with date ranges and specific handle filtering using xAI Live Search
+- **Extreme search**: Advanced multi-step search capability for complex queries
+
+### Academic & Research
+
+- **Academic search**: Search for academic papers and research using Exa AI with abstracts and summaries
+- **YouTube search**: Find YouTube videos with detailed information, captions, and timestamps powered by Exa AI
+
+### Entertainment & Media
+
+- **Movie & TV show search**: Get detailed information about movies and TV shows using TMDB API
+- **Trending movies**: Discover trending movies with cast, ratings, and detailed information
+- **Trending TV shows**: Find popular TV shows with comprehensive metadata
+
+### Financial & Data Analysis
+
+- **Stock charts**: Generate interactive stock charts with news integration using yfinance and Tavily
+- **Currency converter**: Convert between currencies with real-time exchange rates using yfinance
+- **Code interpreter**: Write and execute Python code with chart generation capabilities using Daytona sandbox
+
+### Location & Travel
+
+- **Weather information**: Get current weather and forecasts for any location using OpenWeather API
+- **Maps & geocoding**: Find places and get coordinates using Google Maps API
+- **Nearby places search**: Discover nearby restaurants, attractions, and services with Google Places API
+- **Flight tracking**: Track real-time flight information using Aviation Stack API
+
+### Productivity & Utilities
+
+- **Text translation**: Translate text between languages using AI models
+- **Date & time**: Get current date and time in user's timezone with multiple format options
+- **Memory management**: Add and search personal memories using Mem0 AI
+- **MCP server search**: Search for Model Context Protocol servers using Smithery Registry
+
+### Search Groups
+
+- **Web**: Search across the entire internet powered by Tavily
+- **Memory**: Your personal memory companion (requires authentication)
+- **Analysis**: Code execution, stock charts, and currency conversion
+- **Chat**: Direct conversation with AI models
+- **X**: Search X (Twitter) posts
+- **Reddit**: Search Reddit posts
+- **Academic**: Search academic papers powered by Exa
+- **YouTube**: Search YouTube videos powered by Exa
+- **Extreme**: Deep research with multiple sources and analysis
+
+## LLM Models Supported
+
+- **xAI**: Grok 3, Grok 3 Mini, Grok 2 Vision
+- **Google**: Gemini 2.5 Flash (Preview), Gemini 2.5 Pro (Preview)
+- **Anthropic**: Claude 4 Sonnet
+- **OpenAI**: GPT-4o, o4-mini, o3 (with reasoning capabilities)
+- **Groq**: Qwen QwQ 32B, Qwen 3 32B, Meta's Llama 4 Maverick
 
 ## Built with
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vercel AI SDK](https://sdk.vercel.ai/docs)
-- [Shadcn/UI](https://ui.shadcn.com/)
-- [Exa.AI](https://exa.ai/)
-- [Tavily](https://tavily.com/)
-- [OpenWeather](https://openweathermap.org/)
-- [E2B](https://e2b.dev/)
-- [Google Maps](https://developers.google.com/maps)
-- [Mapbox](https://www.mapbox.com/)
-- [TripAdvisor](https://www.tripadvisor.com/)
-- [AviationStack](https://aviationstack.com/)
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Vercel AI SDK](https://sdk.vercel.ai/docs) - AI model integration
+- [Shadcn/UI](https://ui.shadcn.com/) - UI components
+- [Exa.AI](https://exa.ai/) - Web search and content retrieval
+- [Tavily](https://tavily.com/) - Search grounding for reddit search
+- [OpenWeather](https://openweathermap.org/) - Weather data
+- [Daytona](https://daytona.io/) - Code execution sandbox
+- [Google Maps](https://developers.google.com/maps) - Location services
+- [Aviation Stack](https://aviationstack.com/) - Flight tracking
+- [TMDB](https://www.themoviedb.org/) - Movie and TV data
+- [Mem0](https://mem0.ai/) - Memory management
+- [Better Auth](https://github.com/better-auth/better-auth) - Authentication
+- [Drizzle ORM](https://orm.drizzle.team/) - Database management
+- [Novita AI](https://novita.ai) - AI Inference
 
 ### Deploy your own
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fforeveryh%2Fscira&env=XAI_API_KEY,AZURE_RESOURCE_NAME,AZURE_API_KEY,OPENAI_API_KEY,ANTHROPIC_API_KEY,CEREBRAS_API_KEY,GROQ_API_KEY,E2B_API_KEY,UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN,ELEVENLABS_API_KEY,TAVILY_API_KEY,EXA_API_KEY,TMDB_API_KEY,YT_ENDPOINT,FIRECRAWL_API_KEY,OPENWEATHER_API_KEY,SANDBOX_TEMPLATE_ID,GOOGLE_MAPS_API_KEY,MAPBOX_ACCESS_TOKEN,TRIPADVISOR_API_KEY,AVIATION_STACK_API_KEY,CRON_SECRET,BLOB_READ_WRITE_TOKEN,NEXT_PUBLIC_MAPBOX_TOKEN,NEXT_PUBLIC_POSTHOG_KEY,NEXT_PUBLIC_POSTHOG_HOST,NEXT_PUBLIC_GOOGLE_MAPS_API_KEY&envDescription=API%20keys%20and%20configuration%20required%20for%20Scira%20to%20function)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzaidmukaddam%2Fscira&env=XAI_API_KEY,OPENAI_API_KEY,ANTHROPIC_API_KEY,GROQ_API_KEY,GOOGLE_GENERATIVE_AI_API_KEY,DAYTONA_API_KEY,DATABASE_URL,BETTER_AUTH_SECRET,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET,GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,TWITTER_CLIENT_ID,TWITTER_CLIENT_SECRET,REDIS_URL,ELEVENLABS_API_KEY,TAVILY_API_KEY,EXA_API_KEY,TMDB_API_KEY,YT_ENDPOINT,FIRECRAWL_API_KEY,OPENWEATHER_API_KEY,GOOGLE_MAPS_API_KEY,MAPBOX_ACCESS_TOKEN,AVIATION_STACK_API_KEY,CRON_SECRET,BLOB_READ_WRITE_TOKEN,MEM0_API_KEY,MEM0_ORG_ID,MEM0_PROJECT_ID,SMITHERY_API_KEY,NEXT_PUBLIC_MAPBOX_TOKEN,NEXT_PUBLIC_POSTHOG_KEY,NEXT_PUBLIC_POSTHOG_HOST,NEXT_PUBLIC_SCIRA_PUBLIC_API_KEY,SCIRA_API_KEY&envDescription=API%20keys%20and%20configuration%20required%20for%20Scira%20to%20function)
 
 ## Set Scira as your default search engine
 
@@ -85,7 +143,7 @@ Check out the live demo => **[https://s.deeptoai.com](https://s.deeptoai.com/)**
    - Enter `Scira` in the "Search engine" field.
 
 5. **Set the search engine URL**:
-   - Enter `https://scira.app?q=%s` in the "URL with %s in place of query" field.
+   - Enter `https://scira.ai?q=%s` in the "URL with %s in place of query" field.
 
 6. **Set the search engine shortcut**:
    - Enter `sh` in the "Shortcut" field.
@@ -133,7 +191,7 @@ To run the application locally without Docker:
 1. Sign up for accounts with the required AI providers:
    - OpenAI (required)
    - Anthropic (required)
-   - Tavily (required for web search feature)
+   - Exa (required for web search feature)
 2. Copy `.env.example` to `.env.local` and fill in your API keys
 3. Install dependencies:
    ```bash
@@ -147,4 +205,4 @@ To run the application locally without Docker:
 
 # License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the AGPLv3 License - see the [LICENSE](LICENSE) file for details.

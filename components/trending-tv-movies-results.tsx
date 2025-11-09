@@ -72,7 +72,7 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
 
     const content = (
       <div className="flex flex-col">
-        <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full">
+        <div className="relative aspect-16/9 sm:aspect-21/9 w-full">
           {selectedItem.backdrop_path ? (
             <>
               <img
@@ -80,10 +80,10 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
                 alt={selectedItem.title || selectedItem.name}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent" />
             </>
           ) : (
-            <div className="w-full h-full bg-gradient-to-br from-neutral-900 to-neutral-800" />
+            <div className="w-full h-full bg-linear-to-br from-neutral-900 to-neutral-800" />
           )}
           <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
             <h2 className="text-xl sm:text-3xl font-bold text-white line-clamp-2">
@@ -124,16 +124,14 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
     if (isMobile) {
       return (
         <Drawer open={!!selectedItem} onOpenChange={() => setSelectedItem(null)}>
-          <DrawerContent className="max-h-[85vh] overflow-y-auto">
-            {content}
-          </DrawerContent>
+          <DrawerContent className="max-h-[85vh] overflow-y-auto">{content}</DrawerContent>
         </Drawer>
       );
     }
 
     return (
       <Dialog open={!!selectedItem} onOpenChange={() => setSelectedItem(null)}>
-        <DialogContent className="max-w-3xl p-0 overflow-hidden">{content}</DialogContent>
+        <DialogContent className="max-w-3xl! p-0 overflow-hidden">{content}</DialogContent>
       </Dialog>
     );
   };
@@ -150,9 +148,7 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
             )}
           </div>
           <div>
-            <h2 className="text-lg sm:text-xl font-semibold">
-              Trending {type === 'movie' ? 'Movies' : 'Shows'}
-            </h2>
+            <h2 className="text-lg sm:text-xl font-semibold">Trending {type === 'movie' ? 'Movies' : 'Shows'}</h2>
             <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Top picks for today</p>
           </div>
         </div>
@@ -167,9 +163,7 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
 
       <div
         className={`grid ${
-          isMobile
-            ? 'grid-cols-2 gap-2'
-            : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4'
+          isMobile ? 'grid-cols-2 gap-2' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4'
         } px-4 sm:px-0`}
       >
         {displayedResults.map((item, index) => (
@@ -181,7 +175,7 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
             className="group cursor-pointer"
             onClick={() => setSelectedItem(item)}
           >
-            <div className="relative aspect-[2/3] rounded-lg sm:rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+            <div className="relative aspect-2/3 rounded-lg sm:rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
               {item.poster_path ? (
                 <img
                   src={item.poster_path}
@@ -198,18 +192,16 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
                 </div>
               )}
               <div
-                className="absolute inset-0 bg-gradient-to-t
-                  from-black/90 via-black/40 to-transparent 
-                  opacity-0 group-hover:opacity-100 
+                className="absolute inset-0 bg-linear-to-t
+                  from-black/90 via-black/40 to-transparent
+                  opacity-0 group-hover:opacity-100
                   transition-opacity duration-300
                   flex flex-col justify-end p-3 sm:p-4"
               >
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <div className="flex items-center gap-1.5 text-yellow-400 mb-1.5">
                     <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
-                    <span className="text-xs sm:text-sm font-medium text-white">
-                      {item.vote_average.toFixed(1)}
-                    </span>
+                    <span className="text-xs sm:text-sm font-medium text-white">{item.vote_average.toFixed(1)}</span>
                   </div>
                   <h3 className="text-white text-sm sm:text-base font-medium line-clamp-2 mb-1">
                     {item.title || item.name}
@@ -229,9 +221,7 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
           <DrawerContent className="bg-white dark:bg-neutral-900">
             <div className="flex flex-col h-[90vh]">
               <div className="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-800">
-                <h3 className="text-lg font-semibold">
-                  All Trending {type === 'movie' ? 'Movies' : 'Shows'}
-                </h3>
+                <h3 className="text-lg font-semibold">All Trending {type === 'movie' ? 'Movies' : 'Shows'}</h3>
                 <button
                   onClick={() => setShowAll(false)}
                   className="p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-full"
@@ -253,7 +243,7 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
                         setShowAll(false);
                       }}
                     >
-                      <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                      <div className="relative aspect-2/3 rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                         {item.poster_path ? (
                           <img
                             src={item.poster_path}
@@ -270,7 +260,7 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
                           </div>
                         )}
                         <div
-                          className="absolute inset-0 bg-gradient-to-t
+                          className="absolute inset-0 bg-linear-to-t
                            from-black/90 via-black/40 to-transparent
                            opacity-0 group-hover:opacity-100
                            transition-opacity duration-300
@@ -279,9 +269,7 @@ const TrendingResults = ({ result, type }: TrendingResultsProps) => {
                           <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                             <div className="flex items-center gap-1.5 text-yellow-400 mb-1.5">
                               <Star className="w-3 h-3 fill-current" />
-                              <span className="text-xs font-medium text-white">
-                                {item.vote_average.toFixed(1)}
-                              </span>
+                              <span className="text-xs font-medium text-white">{item.vote_average.toFixed(1)}</span>
                             </div>
                             <h3 className="text-white text-sm font-medium line-clamp-2 mb-1">
                               {item.title || item.name}
